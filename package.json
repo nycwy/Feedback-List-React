@@ -5,12 +5,17 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "start": "npm run dev",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "server": "json-server --watch db.json --port 5000",
+    "godev": "concurrently \"npm run server\" \"npm start\""
   },
   "dependencies": {
+    "concurrently": "^9.2.1",
     "framer-motion": "^4.1.17",
+    "json-server": "^1.0.0-beta.3",
     "prop-types": "^15.8.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
